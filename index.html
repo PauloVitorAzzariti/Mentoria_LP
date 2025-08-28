@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentoria Gestor de Milhões</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    /* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 80px 8% 80px 8%;
+  background: url("images/Inicial2.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    background: url("images/BG-1-TABLET-JOOH.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* muda para alinhar em cima */
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .hero-content {
+    max-width: 80%; /* reduzindo largura */
+    text-align: center;
+    margin-top: 55%;
+    font-size: 0.95rem; /* deixa um pouco menor */
+  }
+  .hero-content h1 {
+    font-size: 1.8rem; /* ajusta título */
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    background: url("images/BG-1-MOBILE-JOOH.jpg") no-repeat top center;
+    background-size: cover;
+    max-width: 110%; /* menor largura no mobile */
+    
+  }
+  .hero-content {
+    max-width: 90%; /* menor largura no mobile */
+    text-align: center;
+    margin-top: 80%; /* ajuste para degradê */
+    padding: 2%;
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+    .hero-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #cfa98a;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    .hero-content h1 span {
+      color: #cfa98a; /* dourado/bege igual da imagem */
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 35px;
+      color: #fff;
+    }
+
+    .hero-content .btn {
+      background: #f5b800;
+      color: #000;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-transform: uppercase;
+    }
+
+    .hero-content .btn:hover {
+      background: #d49700;
+    }
+
+    /* ===== SECTION 2 ===== */
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      background-color: #f2dfc4; /* bege igual ao print */
+      padding: 80px 8%;
+      box-sizing: border-box;
+    }
+
+    .section-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .section-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section-content {
+      flex: 1;
+      color: #000;
+    }
+
+    .section-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .section-content strong {
+      color: #7a0f0f; /* destaque em vermelho vinho */
+      font-weight: 600;
+    }
+
+    .section-content .btn {
+      background: linear-gradient(90deg, #f7c94d, #d49700);
+      color: #000;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      text-transform: uppercase;
+    }
+
+    .section-content .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 992px) {
+      .hero {
+        justify-content: center;
+        text-align: center;
+        padding: 10px ;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 5%;
+      }
+
+      .section-image {
+        order: -1; /* imagem vem primeiro no mobile */
+      }
+    }
+
+  /* ===== SECTION MENTORIA DETALHES ===== */
+.mentoria-detalhes {
+  background-color: #4b0000; /* mesmo fundo da imagem */
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.mentoria-detalhes .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mentoria-detalhes h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  flex: 1 1 100%;
+}
+
+.detalhes-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1 1 60%;
+  margin-left: auto;
+}
+
+.detalhes-cards .card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #600000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease; /* suaviza as mudanças */
+  cursor: pointer; /* deixa claro que é interativo */
+}
+
+.detalhes-cards .card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.detalhes-cards .card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.detalhes-cards .card span {
+  background: #8b5e3c;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .mentoria-detalhes .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mentoria-detalhes h2 {
+    margin-bottom: 30px;
+  }
+
+  .detalhes-cards {
+    margin-left: 0;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .detalhes-cards .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .detalhes-cards .card img {
+    margin-bottom: 10px;
+  }
+}
+
+/* ANIMAÇÃO AO PASSAR O MOUSE */
+.detalhes-cards .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  background: #800000; /* cor mais clara/diferente */
+}
+
+/* ===== SECTION O QUE VOCÊ VAI APRENDER ===== */
+.oque-aprender {
+  background: #4b0000;
+  padding: 40px 20px; /* antes era 80px - diminui espaço vertical */
+  text-align: center;
+  color: #fff;
+}
+
+.oque-aprender h2 {
+  font-size: 28px; /* reduzido de 32px */
+  font-weight: 700;
+  margin-bottom: 30px; /* antes era 40px */
+}
+
+/* Ajuste do Swiper */
+.oque-aprender .swiper {
+  width: 100%;
+  padding-bottom: 35px; /* diminui espaço abaixo */
+}
+
+.oque-aprender .swiper-slide {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 260px; /* deixa o card mais estreito */
+  height: auto;     /* altura automática */
+}
+
+/* Imagens dos cards */
+.oque-aprender .swiper-slide img {
+  width: 100%;
+  max-height: 350px; /* limita a altura */
+  object-fit: cover;
+  display: block;
+}
+
+/* Botões de navegação */
+.oque-aprender .swiper-button-next,
+.oque-aprender .swiper-button-prev {
+  color: #fff;
+}
+
+/* Paginação */
+.oque-aprender .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.6;
+}
+
+.oque-aprender .swiper-pagination-bullet-active {
+  background: #ffcc00;
+  opacity: 1;
+  transform: scale(1.2); /* dá destaque sutil */
+}
+
+/* Section Para quem é */
+.para-quem {
+  background: #5a0a0a; /* fundo vinho */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.para-quem h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.para-quem .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.para-quem .card {
+  background: #7a1111;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.para-quem .card i {
+  color: #ffcc66;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.para-quem .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.para-quem .full {
+  grid-column: span 2; /* ocupa toda a largura */
+}
+
+.para-quem .btn-container {
+  margin-top: 40px;
+}
+
+.para-quem .btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #f5c542, #e1a300);
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.para-quem .btn:hover {
+  background: linear-gradient(90deg, #ffd966, #ffb300);
+}
+
+/* ===== SECTION Para quem é ===== */
+/* ===== SECTION Para quem é ===== */
+.para-quem {
+  background: #5a0a0a;
+  color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards; /* animação ao carregar */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.para-quem h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.para-quem .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.para-quem .card {
+  background: #7a1111;
+  padding: 18px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.para-quem .card i {
+  color: #ffcc66;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.para-quem .card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  background: #8b1a1a;
+}
+
+.para-quem .full {
+  grid-column: span 2;
+}
+
+.para-quem .btn-container {
+  margin-top: 40px;
+}
+
+.para-quem .btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #f5c542, #e1a300);
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.para-quem .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffd966, #ffb300);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .para-quem .cards {
+    grid-template-columns: 1fr;
+  }
+  .para-quem .full {
+    grid-column: span 1;
+  }
+}
+
+
+/* Section Bônus */
+.bonus-section {
+  background-color: #f5e2cc; /* fundo bege claro */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bonus-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #6b1e1e;
+  margin-bottom: 40px;
+}
+
+.bonus-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 40px;
+  background: linear-gradient(to right, #d5bba5, #e9d4c0); /* degrade */
+}
+
+.bonus-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.bonus-image img {
+  max-width: 320px;
+  border-radius: 8px;
+}
+
+.bonus-card {
+  margin-bottom: 40px; /* Espaço entre os cards */
+}
+
+.bonus-text {
+  flex: 1;
+  text-align: left;
+}
+
+.bonus-text h3 {
+  font-size: 22px;
+  color: #3c1a1a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.bonus-text span {
+  color: #6b1e1e;
+  font-weight: 700;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bonus-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bonus-text {
+    text-align: center;
+  }
+}
+
+/* Section Mentora */
+.mentora-section {
+  background: url("images/Mentora.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 5%;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Conteúdo alinhado à esquerda */
+.mentora-content {
+  max-width: 600px;
+}
+
+/* Texto */
+.mentora-subtitle {
+  font-size: 1.2rem;
+  color: #d4a373;
+}
+.mentora-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .mentora-section {
+    background: url("images/BG-BIO-TABLET-JOOH.jpg") no-repeat center center;
+    background-size: cover;
+    align-items: flex-start; /* força o conteúdo para o topo */
+    justify-content: center;
+  }
+  .mentora-content {
+    max-width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mentora-section {
+    background: url("images/BG-BIO-MOBILE-JOOH.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 60px 20px;
+    align-items: flex-start; /* força o conteúdo para o topo */
+  }
+  .mentora-content {
+    max-width: 100%;
+  }
+  
+}
+
+.cta-section {
+    background: #4a0a0a; /* fundo vinho */
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .cta-container {
+    max-width: 900px;
+    margin: 0 auto 60px;
+  }
+
+  .cta-text {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    background: #ffd700;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .cta-button:hover {
+    background: #e6c200;
+  }
+
+  .cta-arrow {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+  }
+
+  /* BLOCO GARANTIA */
+  .garantia-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+
+  .garantia-img img {
+    max-width: 250px;
+    height: auto;
+    animation: bounceInLeft 1s ease;
+  }
+
+  .garantia-text {
+    flex: 1;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    animation: fadeInRight 1.2s ease;
+  }
+
+  /* Animações */
+  @keyframes bounceInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .garantia-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .garantia-img img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+    .garantia-text {
+    font-size: 1.0rem;
+  }
+  }
+
+  /* FAQ */
+.faq-section {
+  background: #5c0000;
+  padding: 60px 20px;
+  text-align: center;
+  color: #f5d0b0;
+}
+.faq-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  background: #400000;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.faq-question::after {
+  content: "▸";
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-question::after {
+  transform: rotate(90deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #330000;
+  padding: 0 15px;
+  transition: max-height 0.4s ease;
+}
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 15px;
+}
+
+/* BOTÃO CTA FINAL */
+.faq-cta {
+  margin-top: 40px;
+}
+.faq-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffcc33, #ff9900);
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.faq-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 153, 0, 0.7);
+}
+
+/* FOOTER */
+.footer {
+  background-color:  #330000; /* mantém a cor escura */
+  padding: 40px 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer-logo img {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-copy {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.footer-disclaimer {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.5;
+}
+
+.footer-dev {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h3>Mentoria<br>Gestor de Milhões</h3>
+      <h1>
+        Aprenda como se tornar um Gestor de Mídias profissional e ganhar muito dinheiro com a sua 
+        <span>Agenda Lotada de clientes.</span>
+      </h1>
+      <p>
+        Faça sua inscrição e garanta sua vaga na próxima turma da Mentoria Gestor de Milhões.
+      </p>
+      <button class="btn">Quero ser um gestor de milhões</button>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="section">
+    <div class="section-image">
+      <img src="images/MOCKUP-celular.png" alt="Mentoria - Cards Celulares">
+    </div>
+
+    <div class="section-content">
+      <p>
+        Seja para começar uma nova carreira, trabalhar para negócios de outras pessoas, ou impulsionar os seus próprios negócios, nessa Mentoria você vai <strong>aprender</strong> a usar o <strong>poder</strong> das redes sociais ao seu favor.
+      </p>
+      <p>
+        Você poderá se tornar um gestor de sucesso, faturando entre <strong>500$ e 2.000$ dólares</strong> (ou mais) mensalmente trabalhando de onde estiver, apenas com seu celular ou computador.
+      </p>
+      <p>
+        Nesta Mentoria, você vai aprender como explorar o <strong>melhor</strong> das ferramentas das redes sociais, entender as principais <strong>métricas</strong>, e conhecer <strong>estratégias</strong> práticas para construir redes sociais super <strong>lucrativas</strong>.
+      </p>
+
+      <button class="btn">Quero ser um gestor de milhões</button>
+    </div>
+  </section>
+
+
+  <!-- SECTION - Detalhes da Mentoria -->
+<section class="mentoria-detalhes">
+  <div class="container">
+    <h2>Detalhes Sobre a Mentoria:</h2>
+    <div class="detalhes-cards">
+      <div class="card">
+        <img src="images/CARD1.jpg" alt="Mentora">
+        <p><span>As vagas são limitadas</span> para que você possa ser acompanhado/a de perto e obtenha resultados reais.</p>
+      </div>
+      <div class="card">
+        <img src="images/CARD2.jpg" alt="Mentora">
+        <p><span>Aulas online ao vivo</span> dias 23, 24 e 25 de janeiro de 2023.</p>
+      </div>
+      <div class="card">
+        <img src="images/CARD3.jpg" alt="Mentora">
+        <p>Após concluir a Mentoria você receberá um <span>certificado para comprovar</span> que se tornou um Gestor de Mídias Profissional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION - O que você vai aprender -->
+<section class="oque-aprender">
+  <div class="container">
+    <h2>O que você vai aprender:</h2>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-1.jpg" alt="Detalhes da aprovação do conteúdo">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-10.jpg" alt="Agendamento de conteúdo">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-11.jpg" alt="Interação de conteúdo">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-12.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-13.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-2.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-3.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-4.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-5.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="swiper-slide">
+          <img src="images/CARD-JOOH-6.jpg" alt="Análise de métricas das redes">
+        </div>
+
+        <!-- Adicione quantos módulos precisar -->
+      </div>
+
+      <!-- Paginação -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Botões de navegação -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION - Para quem é essa Mentoria -->
+<section class="para-quem">
+  <div class="container">
+    <h2>Para Quem é Essa Mentoria</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-check-circle"></i> Para quem quer fazer transição de carreira</div>
+      <div class="card"><i class="fas fa-check-circle"></i> Para quem quer ser um profissional reconhecido na área de Gestão de Mídias</div>
+      <div class="card"><i class="fas fa-check-circle"></i> Para quem quer trabalhar de casa, perto dos filhos</div>
+      <div class="card"><i class="fas fa-check-circle"></i> Para quem quer liberdade financeira podendo faturar muito mais do que a média salarial da sua região</div>
+      <div class="card"><i class="fas fa-check-circle"></i> Para quem gosta de viajar mas se sente preso em um trabalho onde precisa cumprir horário</div>
+      <div class="card"><i class="fas fa-check-circle"></i> Para quem quer fazer seus próprios horários de trabalho ou trabalhar apenas meio período</div>
+      <div class="card full"><i class="fas fa-check-circle"></i> Para quem ainda é adolescente entre 15 e 18 anos que ainda não consegue ser contratado de maneira registrada mas já quer ganhar seu próprio dinheiro</div>
+    </div>
+    <div class="btn-container">
+      <a href="#" class="btn">QUERO SER UM GESTOR DE MILHÕES</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION - Bonus -->
+<section class="bonus-section">
+  <h2 class="bonus-title">Você Também Terá Acesso a Bônus</h2>
+  
+  <!-- Card 1 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/calendario.png" alt="Calendário de Postagens">
+      </div>
+      <div class="bonus-text">
+        <h3>Calendário de <span>Postagens</span> para 1 ano</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/box-300x283.png" alt="E-book Exclusivo">
+      </div>
+      <div class="bonus-text">
+        <h3><span>Mais de 200 templates</span> prontos e editáveis <br>de conteúdo para nichos variados</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/EBOOK-JOOH.png" alt="Checklist Profissional">
+      </div>
+      <div class="bonus-text">
+        <h3><span>E-book</span> A chave para o sucesso do seu negócio</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Card 4 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="100">
+        <img src="images/MOCKUP-AULA.png" alt="Checklist Profissional">
+      </div>
+      <div class="bonus-text">
+        <h3><span>Video Aulas</span> para entender o básico sobre tráfego pago</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/MOCKUP-AULA-2.png" alt="Checklist Profissional">
+      </div>
+      <div class="bonus-text">
+        <h3><span>Acompanhamento Onlines</span>nos 60 dias <br> posteriores a mentoria para que você
+        <br>possa tirar todas as suas dúvidas</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Card 6 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/TELEGRAM-MOCKUP.png" alt="Checklist Profissional">
+      </div>
+      <div class="bonus-text">
+        <h3><span>Comunidade Exclusiva no Telegram</span><br>onde você poderá contar com um 
+        <br>ambiente de interação e poderá trocar <br>experiências entre alunos.</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/box-2-jooh-300x283.png" alt="Checklist Profissional">
+      </div>
+      <div class="bonus-text">
+        <h3><span>Material de Apoio</span> para que você possa  
+        <br>fazer suas anotações e montar suas <br>estratégias para começar a trabalhar 
+        <br>assim que a mentoria terminar.</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="bonus-card">
+    <div class="bonus-content">
+      <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/certificado.png" alt="Checklist Profissional">
+      </div>
+      <div class="bonus-text">
+        <h3><span>Certificado de Conclusão</span> para <br> comprovar que se tornou um Gestor de 
+        <br>Mídias Profissional qualificado para <br>ajudar o seu cliente da melhor maneira</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION - CTA + Garntia -->
+<section class="cta-section">
+  <div class="cta-container">
+    <p class="cta-text">
+      Não fique de fora, as vagas vão esgotar rapidamente, você vai fazer desse ano um ano diferente ou vai continuar
+      “deixando dinheiro na mesa”?
+    </p>
+    <h2 class="cta-title">
+      Inscreva-se agora mesmo e<br>Garanta Sua Vaga!
+    </h2>
+    <a href="#formulario" class="cta-button">QUERO SER UM GESTOR DE MILHÕES</a>
+    <div class="cta-arrow">⌄</div>
+  </div>
+
+  <!-- BLOCO GARANTIA -->
+  <div class="garantia-container">
+    <div class="garantia-img">
+      <img src="images/selo-de-garantia.png" alt="Selo Garantia 7 Dias">
+    </div>
+    <div class="garantia-text">
+      <p>
+        Minha confiança nos resultados que você vai adquirir com a 
+        <strong>Mentoria Gestor de Milhões</strong> são tão grandes que 
+        como já não fosse suficiente, você ainda terá uma 
+        garantia incondicional de <strong>7 dias</strong>!
+      </p>
+      <p>
+        Ou seja, se em 7 dias você não gostar do conteúdo ou sentir que não é para você, 
+        nós devolvemos <strong>100% do valor investido</strong> sem dor de cabeça ou burocracia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION - FAQ -->
+<section class="faq-section">
+  <h2 class="faq-title">Dúvidas Frequentes</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">Como posso ter certeza que não é “mais do mesmo” ?</button>
+      <div class="faq-answer">
+        <p>Nossa formação é única, com metodologia prática e focada em resultados comprovados.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Posso parcelar?</button>
+      <div class="faq-answer">
+        <p>Sim! Você pode parcelar em até 12x no cartão de crédito.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Terei algum suporte durante a formação?</button>
+      <div class="faq-answer">
+        <p>Sim, você terá suporte direto para tirar dúvidas durante toda a formação.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">O que acontece se eu me arrepender de comprar a formação?</button>
+      <div class="faq-answer">
+        <p>Você tem garantia de 7 dias para pedir reembolso.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Quais as formas de pagamento?</button>
+      <div class="faq-answer">
+        <p>Cartão de crédito, boleto à vista e PIX.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Será emitido certificado?</button>
+      <div class="faq-answer">
+        <p>Sim, ao concluir a formação você receberá certificado digital.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Por quanto tempo terei acesso ao conteúdo?</button>
+      <div class="faq-answer">
+        <p>O acesso é vitalício, você pode revisar quando quiser.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Em quanto tempo terei resultados?</button>
+      <div class="faq-answer">
+        <p>Depende da sua dedicação, mas nossos alunos já conseguem resultados em poucas semanas.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTÃO FINAL -->
+  <div class="faq-cta">
+    <a href="#formulario" class="faq-button">QUERO SER UM GESTOR DE MILHÕES</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo centralizado -->
+    <div class="footer-logo">
+      <img src="images/logo-footer.png" alt="Logo Cristian Teilon">
+    </div>
+
+    <!-- Texto de copyright -->
+    <p class="footer-copy">
+      Copyright © 2025 Paulo Vitor. Todos os direitos reservados.
+    </p>
+
+    <!-- Aviso Facebook/Meta -->
+    <p class="footer-disclaimer">
+      Este site não faz parte do FACEBOOK, META ou META Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca comercial da META Inc.
+    </p>
+
+    <!-- Crédito do desenvolvedor -->
+    <p class="footer-dev">
+      Desenvolvido por Paulo Vitor Azzariti.
+    </p>
+  </div>
+</footer>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 25,
+    loop: true,
+    loopedSlides: 10,         // garante o loop suave com 10 slides
+    centeredSlides: true,     // 👈 sempre mantém os slides centralizados
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1024: { slidesPerView: 4, centeredSlides: true },
+      768:  { slidesPerView: 2, centeredSlides: true },
+      480:  { slidesPerView: 1, centeredSlides: true },
+    },
+  });
+  // FAQ TOGGLE
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      item.classList.toggle("active");
+    });
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
