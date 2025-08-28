@@ -366,11 +366,13 @@
   transform: scale(1.2); /* dá destaque sutil */
 }
 
-.swiper-slide img {
+.swiper-slide img{
   width: 100%;
   height: auto;
+  display: block;
   border-radius: 12px;
 }
+
 
 
 /* Section Para quem é */
@@ -1276,9 +1278,10 @@
   var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
   spaceBetween: 25,
-  loop: true,
-  loopedSlides: 10,
-  centeredSlides: true, // mantém só no desktop
+  loop: true,               // mantemos loop
+  centeredSlides: true,
+  observer: true,
+  observeParents: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -1288,25 +1291,30 @@
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    1024: { 
-      slidesPerView: 4, 
-      centeredSlides: true 
-    },
-    768: { 
-      slidesPerView: 2,   // 👉 dois por vez no tablet
-      centeredSlides: false 
-    },
-    480:  { 
-      slidesPerView: 1.2, // 👉 um quase cheio da tela no celular
-      centeredSlides: false 
-    },
-    0: { 
-      slidesPerView: 1,   // 👉 um por vez em telas muito pequenas
-      centeredSlides: false 
-    }
+    1024: { slidesPerView: 4, centeredSlides: true },
+    768:  { slidesPerView: 2, centeredSlides: false },
+    480:  { slidesPerView: 1.1, centeredSlides: false },
+    0:    { slidesPerView: 1, centeredSlides: false },
   },
 });
 
+const imgs = document.querySelectorAll('.mySwiper img');
+let loaded = 0;
+imgs.forEach(img => {
+  if (img.complete) {
+    loaded++;
+  } else {
+    img.addEventListener('load', () => {
+      loaded++;
+      if (loaded === imgs.length) swiper.update();
+    });
+    img.addEventListener('error', () => {
+      loaded++;
+      if (loaded === imgs.length) swiper.update();
+    });
+  }
+});
+if (loaded === imgs.length) swiper.update();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
