@@ -366,6 +366,14 @@
   transform: scale(1.2); /* dá destaque sutil */
 }
 
+.swiper-slide img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+
 
 /* Section Para quem é */
 .para-quem {
@@ -1037,7 +1045,7 @@
   <div class="bonus-card">
     <div class="bonus-content">
       <div class="bonus-image" data-aos="fade-right" data-aos-duration="1000">
-        <img src="images/CALENDARIO.png" alt="Calendário de Postagens">
+        <img src="images/calendario.png" alt="Calendário de Postagens">
       </div>
       <div class="bonus-text">
         <h3>Calendário de <span>Postagens</span> para 1 ano</h3>
@@ -1267,33 +1275,49 @@
 </footer>
 
 <script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 25,
-    loop: true,
-    loopedSlides: 10,         // garante o loop suave com 10 slides
-    centeredSlides: true,     // 👈 sempre mantém os slides centralizados
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      1024: { slidesPerView: 4, centeredSlides: true },
-      768:  { slidesPerView: 2, centeredSlides: true },
-      480:  { slidesPerView: 1, centeredSlides: true },
-    },
-  });
-  // FAQ TOGGLE
-  document.querySelectorAll(".faq-question").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const item = btn.parentElement;
-      item.classList.toggle("active");
+
+    const imgs = document.querySelectorAll('.mySwiper img');
+let loaded = 0;
+imgs.forEach(img => {
+  if (img.complete) {
+    loaded++;
+  } else {
+    img.addEventListener('load', () => {
+      loaded++;
+      if (loaded === imgs.length) swiper.update();
     });
-  });
+    img.addEventListener('error', () => {
+      loaded++;
+      if (loaded === imgs.length) swiper.update();
+    });
+  }
+});
+if (loaded === imgs.length) swiper.update();
+
+  var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 10,
+  spaceBetween: 25,
+  loop: true,               // mantemos loop
+  centeredSlides: true,
+  observer: true,
+  observeParents: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1024: { slidesPerView: 4, centeredSlides: true },
+    768:  { slidesPerView: 2, centeredSlides: false },
+    480:  { slidesPerView: 1.1, centeredSlides: false },
+    0:    { slidesPerView: 1, centeredSlides: false },
+  },
+});
+
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
