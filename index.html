@@ -38,7 +38,6 @@
 }
 
 
-
 /* Tablet */
 @media (max-width: 1024px) {
   .hero {
@@ -67,7 +66,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hero {
-    background: url("img/Fundo.mobile.jpg") no-repeat top center;
+    background: url("images/BG-1-MOBILE-JOOH.jpg") no-repeat top center;
     background-size: cover;
     max-width: 110%; /* menor largura no mobile */
     
@@ -84,18 +83,6 @@
   }
   .hero-content p {
     font-size: 0.95rem;
-  }
-
-  .hero-content img {
-    width: 250px;     /* diminui a largura */
-    margin-top: 60px; /* desce um pouco mais no mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content img {
-    width: 200px;
-    margin-top: 80px; /* ainda mais espaço no mobile pequeno */
   }
 }
 
@@ -179,7 +166,7 @@
     }
 
     .section-content strong {
-      color:#006cb0; /* destaque em vermelho vinho */
+      color: #7a0f0f; /* destaque em vermelho vinho */
       font-weight: 600;
     }
 
@@ -226,7 +213,7 @@
 
   /* ===== SECTION MENTORIA DETALHES ===== */
 .mentoria-detalhes {
-  background-color: #ffffff; /* mesmo fundo da imagem */
+  background-color: #4b0000; /* mesmo fundo da imagem */
   padding: 80px 20px;
   color: #fff;
 }
@@ -245,7 +232,6 @@
   font-weight: 700;
   margin-bottom: 40px;
   flex: 1 1 100%;
-  color: #010179;
 }
 
 .detalhes-cards {
@@ -260,7 +246,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #006cb0;
+  background: #600000;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.25);
@@ -297,10 +283,7 @@
 
   .mentoria-detalhes h2 {
     margin-bottom: 30px;
-    font-size: 1.5rem;
-    line-height: 1.3;
   }
-  
 
   .detalhes-cards {
     margin-left: 0;
@@ -322,12 +305,12 @@
 .detalhes-cards .card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-  background:#0009b0; /* cor mais clara/diferente */
+  background: #800000; /* cor mais clara/diferente */
 }
 
 /* ===== SECTION O QUE VOCÊ VAI APRENDER ===== */
 .oque-aprender {
-  background:#006cb0;
+  background: #4b0000;
   padding: 40px 20px; /* antes era 80px - diminui espaço vertical */
   text-align: center;
   color: #fff;
@@ -383,9 +366,18 @@
   transform: scale(1.2); /* dá destaque sutil */
 }
 
+.swiper-slide img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+
+
 /* Section Para quem é */
 .para-quem {
-  background: #006cb0; /* fundo vinho */
+  background: #5a0a0a; /* fundo vinho */
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -406,7 +398,7 @@
 }
 
 .para-quem .card {
-  background: #006cb0;
+  background: #7a1111;
   padding: 20px;
   border-radius: 12px;
   display: flex;
@@ -453,7 +445,7 @@
 /* ===== SECTION Para quem é ===== */
 /* ===== SECTION Para quem é ===== */
 .para-quem {
-  background: #006cb0;
+  background: #5a0a0a;
   color: #fff;
   padding: 70px 20px;
   text-align: center;
@@ -484,7 +476,7 @@
 }
 
 .para-quem .card {
-  background: #02087d;
+  background: #7a1111;
   padding: 18px 20px;
   border-radius: 12px;
   display: flex;
@@ -503,7 +495,7 @@
 .para-quem .card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-  background: #006cb0;
+  background: #8b1a1a;
 }
 
 .para-quem .full {
@@ -543,7 +535,7 @@
 
 /* Section Bônus */
 .bonus-section {
-  background-color: #ffffff; /* fundo bege claro */
+  background-color: #f5e2cc; /* fundo bege claro */
   padding: 60px 20px;
   text-align: center;
 }
@@ -552,7 +544,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   font-weight: 700;
-  color: #250daf;
+  color: #6b1e1e;
   margin-bottom: 40px;
 }
 
@@ -561,7 +553,7 @@
   margin: 0 auto;
   border-radius: 12px;
   padding: 40px;
-  background: linear-gradient(to right, #006cb0, #071794); /* degrade */
+  background: linear-gradient(to right, #d5bba5, #e9d4c0); /* degrade */
 }
 
 .bonus-content {
@@ -588,13 +580,13 @@
 
 .bonus-text h3 {
   font-size: 22px;
-  color: #ffffff;
+  color: #3c1a1a;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
 .bonus-text span {
-  color: #32a8f2;
+  color: #6b1e1e;
   font-weight: 700;
 }
 
@@ -628,7 +620,7 @@
 /* Texto */
 .mentora-subtitle {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #d4a373;
 }
 .mentora-title {
   font-size: 2.5rem;
@@ -664,7 +656,7 @@
 }
 
 .cta-section {
-    background: #006cb0; /* fundo vinho */
+    background: #4a0a0a; /* fundo vinho */
     text-align: center;
     padding: 80px 20px;
   }
@@ -788,10 +780,10 @@
 
   /* FAQ */
 .faq-section {
-  background: #006cb0;
+  background: #5c0000;
   padding: 60px 20px;
   text-align: center;
-  color: #ffffff;
+  color: #f5d0b0;
 }
 .faq-title {
   font-size: 2.2rem;
@@ -808,10 +800,10 @@
 .faq-question {
   width: 100%;
   padding: 15px;
-  background: #1d00b0;
+  background: #400000;
   border: none;
   outline: none;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.1rem;
   text-align: left;
   cursor: pointer;
@@ -829,7 +821,7 @@
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background:#a7a6b3;
+  background: #330000;
   padding: 0 15px;
   transition: max-height 0.4s ease;
 }
@@ -859,10 +851,10 @@
 
 /* FOOTER */
 .footer {
-  background-color:  #006cb0; /* mantém a cor escura */
+  background-color:  #330000; /* mantém a cor escura */
   padding: 40px 20px;
   text-align: center;
-  color: #ffffff;
+  color: #ccc;
   font-size: 0.9rem;
 }
 
@@ -881,75 +873,15 @@
   max-width: 800px;
   margin: 10px auto;
   font-size: 0.8rem;
-  color: #ffffff;
+  color: #999;
   line-height: 1.5;
 }
 
 .footer-dev {
   margin-top: 15px;
   font-size: 0.8rem;
-  color: #ffffff;
+  color: #777;
 }
-
-
-.form-section {
-  padding: 50px 20px;
-  background: #f7f7f7;
-  text-align: center;
-}
-
-.form-container {
-  max-width: 600px;
-  margin: auto;
-  background: #006cb0;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px white;
-}
-
-.form-container p {
-  color: #ffffff;
-}
-
-.form-container h2 {
-  color: #ffffff;
-}
-
-label {
-  color: white;
-}
-
-.formulario {
-  margin-top: 20px;
-}
-
-.formulario input, 
-.formulario select, 
-.formulario textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.formulario button {
-  background: #d4af37;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.formulario button:hover {
-  background: #b8902f;
-}
-
-
 
   </style>
 </head>
@@ -958,11 +890,14 @@ label {
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-     <img src="img/Logo principal.png" alt="Logo Cristian Teilon">
+      <h3>Mentoria<br>Gestor de Milhões</h3>
       <h1>
         Aprenda como se tornar um Gestor de Mídias profissional e ganhar muito dinheiro com a sua 
         <span>Agenda Lotada de clientes.</span>
       </h1>
+      <p>
+        Faça sua inscrição e garanta sua vaga na próxima turma da Mentoria Gestor de Milhões.
+      </p>
       <a href="#formulario" class="faq-button">QUERO SER UM GESTOR DE MILHÕES</a>
     </div>
   </section>
@@ -1314,58 +1249,12 @@ label {
   </div>
 </section>
 
-
-<!-- SECTION - FORMULÁRIO DE ANAMNESE -->
-<section class="form-section" id="formulario">
-  <div class="form-container">
-    <h2>Formulário de Anamnese</h2>
-    <p>Preencha os dados abaixo para agendar sua consulta:</p>
-
-    <!-- Seleção do tipo -->
-    <label for="tipo-atendimento">Atendimento para:</label>
-    <select id="tipo-atendimento" onchange="mostrarFormulario()">
-      <option value="">Selecione</option>
-      <option value="auto">Autoatendimento (para mim)</option>
-      <option value="outro">Outro paciente (filho, pais, esposo, etc.)</option>
-    </select>
-
-    <!-- Formulário Autoatendimento -->
-    <form id="form-auto" class="formulario" style="display:none;">
-      <input type="text" id="nomeAuto" placeholder="Nome completo" required>
-      <input type="text" id="idadeAuto" placeholder="Idade" required>
-      <input type="text" id="enderecoAuto" placeholder="Endereço" required>
-      <input type="text" id="contatoAuto" placeholder="Telefone/WhatsApp" required>
-      <textarea id="problemaAuto" placeholder="Breve descrição do problema" required></textarea>
-      <button type="button" onclick="enviarWhatsApp('auto')">Enviar para WhatsApp</button>
-    </form>
-
-    <!-- Formulário Outro Paciente -->
-    <form id="form-outro" class="formulario" style="display:none;">
-      <input type="text" id="responsavelNome" placeholder="Nome completo do responsável" required>
-      <select id="responsavelParentesco" required>
-        <option value="">Selecione o parentesco</option>
-        <option value="Pai">Pai</option>
-        <option value="Mãe">Mãe</option>
-        <option value="Esposo(a)">Esposo(a)</option>
-        <option value="Filho(a)">Filho(a)</option>
-        <option value="Outro">Outro</option>
-      </select>
-      <input type="text" id="pacienteNome" placeholder="Nome completo do paciente" required>
-      <input type="text" id="pacienteIdade" placeholder="Idade do paciente" required>
-      <input type="text" id="enderecoPaciente" placeholder="Endereço" required>
-      <input type="text" id="responsavelContato" placeholder="Telefone/WhatsApp do responsável" required>
-      <textarea id="problemaPaciente" placeholder="Breve descrição do problema" required></textarea>
-      <button type="button" onclick="enviarWhatsApp('outro')">Enviar para WhatsApp</button>
-    </form>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
     <!-- Logo centralizado -->
     <div class="footer-logo">
-      <img src="img/Logo principal.png" alt="Logo Cristian Teilon">
+      <img src="images/logo-footer.png" alt="Logo Cristian Teilon">
     </div>
 
     <!-- Texto de copyright -->
@@ -1387,79 +1276,48 @@ label {
 
 <script>
 
-function mostrarFormulario() {
-  const tipo = document.getElementById("tipo-atendimento").value;
-  document.getElementById("form-auto").style.display = tipo === "auto" ? "block" : "none";
-  document.getElementById("form-outro").style.display = tipo === "outro" ? "block" : "none";
-}
-
-function enviarWhatsApp(tipo) {
-  let mensagem = "";
-  if (tipo === "auto") {
-    const nome = document.getElementById("nomeAuto").value;
-    const idade = document.getElementById("idadeAuto").value;
-    const endereco = document.getElementById("enderecoAuto").value;
-    const contato = document.getElementById("contatoAuto").value;
-    const problema = document.getElementById("problemaAuto").value;
-
-    mensagem = `📋 *Anamnese - Autoatendimento*%0A
-👤 Nome: ${nome}%0A
-🎂 Idade: ${idade}%0A
-🏠 Endereço: ${endereco}%0A
-📞 Contato: ${contato}%0A
-📝 Problema: ${problema}`;
+    const imgs = document.querySelectorAll('.mySwiper img');
+let loaded = 0;
+imgs.forEach(img => {
+  if (img.complete) {
+    loaded++;
   } else {
-    const responsavel = document.getElementById("responsavelNome").value;
-    const parentesco = document.getElementById("responsavelParentesco").value;
-    const paciente = document.getElementById("pacienteNome").value;
-    const idade = document.getElementById("pacienteIdade").value;
-    const endereco = document.getElementById("enderecoPaciente").value;
-    const contato = document.getElementById("responsavelContato").value;
-    const problema = document.getElementById("problemaPaciente").value;
-
-    mensagem = `📋 *Anamnese - Outro Paciente*%0A
-👤 Responsável: ${responsavel}%0A
-👪 Parentesco: ${parentesco}%0A
-🧑 Paciente: ${paciente}%0A
-🎂 Idade: ${idade}%0A
-🏠 Endereço: ${endereco}%0A
-📞 Contato do responsável: ${contato}%0A
-📝 Problema: ${problema}`;
+    img.addEventListener('load', () => {
+      loaded++;
+      if (loaded === imgs.length) swiper.update();
+    });
+    img.addEventListener('error', () => {
+      loaded++;
+      if (loaded === imgs.length) swiper.update();
+    });
   }
-
-  const numeroWhatsApp = "55SEUNUMEROAQUI"; // coloque o número com DDI + DDD
-  const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
-  window.open(url, "_blank");
-}
-
+});
+if (loaded === imgs.length) swiper.update();
 
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 25,
-    loop: true,
-    loopedSlides: 10,         // garante o loop suave com 10 slides
-    centeredSlides: true,     // 👈 sempre mantém os slides centralizados
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      1024: { slidesPerView: 4, centeredSlides: true },
-      768:  { slidesPerView: 2, centeredSlides: true },
-      480:  { slidesPerView: 1, centeredSlides: true },
-    },
-  });
-  // FAQ TOGGLE
-  document.querySelectorAll(".faq-question").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const item = btn.parentElement;
-      item.classList.toggle("active");
-    });
-  });
+  slidesPerView: 10,
+  spaceBetween: 25,
+  loop: true,               // mantemos loop
+  centeredSlides: true,
+  observer: true,
+  observeParents: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1024: { slidesPerView: 4, centeredSlides: true },
+    768:  { slidesPerView: 2, centeredSlides: false },
+    480:  { slidesPerView: 1.1, centeredSlides: false },
+    0:    { slidesPerView: 1, centeredSlides: false },
+  },
+});
+
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
